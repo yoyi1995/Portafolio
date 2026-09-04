@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Jordy Diaz — Ingeniero en TI, Full Stack Developer & AI/ML Engineer. Machala, Ecuador." />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>Jordy Diaz · Full Stack & AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-grid"></div>
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__logo">
+        <span class="logo-mark">&lt;J/&gt;</span>
+        <span class="logo-text">Jordy<span class="accent">.</span>dev</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">Sobre mí</a>
+        <a href="#stack">Stack</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#research">Investigación</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge reveal">
+          <span class="dot"></span> Disponible para nuevos proyectos
+        </div>
+        <h1 class="hero__title reveal">
+          Hola, soy <span class="gradient-text">Jordy Diaz</span>
+          <br />Full Stack & <span class="accent">AI Engineer</span>
+        </h1>
+        <p class="hero__subtitle reveal">
+          Ingeniero en Tecnologías de la Información especializado en desarrollo Full Stack,
+          Inteligencia Artificial y Ciencia de Datos. Construyo aplicaciones web, APIs REST
+          y soluciones basadas en datos con impacto real.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary">
+            Ver proyectos
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost">Hablemos</a>
+        </div>
+        <div class="hero__stats reveal">
+          <div class="stat">
+            <div class="stat__num" data-count="500">0</div>
+            <div class="stat__label">Usuarios activos en YILPORT</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="300">0</div>
+            <div class="stat__label">Registros automatizados</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="5">0</div>
+            <div class="stat__label">Años de experiencia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal">
+        <div class="code-card">
+          <div class="code-card__bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-card__file">jordy.js</span>
+          </div>
+          <pre class="code-card__body"><code><span class="c-kw">const</span> <span class="c-fn">developer</span> <span class="c-op">=</span> {
+  <span class="c-prop">name</span>: <span class="c-str">"ING Jordy Diaz"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"Full Stack & AI"</span>,
+  <span class="c-prop">location</span>: <span class="c-str">"Machala, EC"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"Next.js"</span>, <span class="c-str">"NestJS"</span>, <span class="c-str">"Python"</span>],
+  <span class="c-prop">ai</span>: [<span class="c-str">"TensorFlow"</span>, <span class="c-str">"YOLOv8"</span>, <span class="c-str">"OpenCV"</span>],
+  <span class="c-prop">build</span>: <span class="c-str">"ship cool things"</span>,
+  <span class="c-prop">available</span>: <span class="c-bool">true</span>
+};</code></pre>
+        </div>
+
+        <div class="float-badge float-badge--1">
+          <span>🤖</span> YOLOv8
+        </div>
+        <div class="float-badge float-badge--2">
+          <span>⚡</span> Next.js
+        </div>
+        <div class="float-badge float-badge--3">
+          <span>🧠</span> TensorFlow
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">01 · Sobre mí</span>
+        <h2>Construyo productos que <span class="gradient-text">resuelven problemas reales</span></h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            Soy Ingeniero en Tecnologías de la Información con experiencia práctica en
+            <strong>desarrollo Full Stack</strong>, <strong>Inteligencia Artificial</strong> y
+            <strong>Ciencia de Datos</strong>. He construido desde intranets corporativas con
+            más de 500 usuarios hasta prototipos de visión artificial publicados en revistas científicas.
+          </p>
+          <p>
+            Me gusta trabajar en la intersección entre el software robusto y la IA aplicada:
+            APIs limpias, modelos que funcionan en producción, y código que otros pueden mantener.
+          </p>
+          <ul class="about__list">
+            <li><span>✓</span> Diseño y desarrollo de aplicaciones web Full Stack</li>
+            <li><span>✓</span> Machine Learning, Deep Learning y visión artificial</li>
+            <li><span>✓</span> APIs REST, bases de datos SQL/NoSQL y automatizaciones</li>
+            <li><span>✓</span> Soporte TI, infraestructura y gestión de incidencias</li>
+          </ul>
+        </div>
+        <div class="about__cards reveal">
+          <div class="info-card">
+            <div class="info-card__icon">📍</div>
+            <div>
+              <div class="info-card__title">Ubicación</div>
+              <div class="info-card__sub">Machala, El Oro · Ecuador</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">🎓</div>
+            <div>
+              <div class="info-card__title">Formación</div>
+              <div class="info-card__sub">Ing. en TIC — UTMachala</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">🌐</div>
+            <div>
+              <div class="info-card__title">Idiomas</div>
+              <div class="info-card__sub">Español (nativo) · Inglés A2</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">📄</div>
+            <div>
+              <div class="info-card__title">Publicación</div>
+              <div class="info-card__sub">Revista Ódigos 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section section--alt" id="stack">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">02 · Stack Tecnológico</span>
+        <h2>Las herramientas con las que <span class="gradient-text">construyo</span></h2>
+      </div>
+      <div class="stack__grid">
+        <div class="stack__col reveal">
+          <h3>Lenguajes</h3>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Java</span>
+            <span class="chip">C#/.NET</span>
+            <span class="chip">PHP</span>
+          </div>
+        </div>
+        <div class="stack__col reveal">
+          <h3>Frontend</h3>
+          <div class="chips">
+            <span class="chip">Angular</span>
+            <span class="chip">React</span>
+            <span class="chip">Vue.js</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">Bootstrap</span>
+          </div>
+        </div>
+        <div class="stack__col reveal">
+          <h3>Backend</h3>
+          <div class="chips">
+            <span class="chip">Node.js</span>
+            <span class="chip">NestJS</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Laravel</span>
+          </div>
+        </div>
+        <div class="stack__col reveal">
+          <h3>IA & Data</h3>
+          <div class="chips">
+            <span class="chip">TensorFlow</span>
+            <span class="chip">YOLOv8</span>
+            <span class="chip">OpenCV</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Deep Learning</span>
+            <span class="chip">Machine Learning</span>
+            
+          </div>
+        </div>
+        <div class="stack__col reveal">
+          <h3>Bases de Datos</h3>
+          <div class="chips">
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Redis</span>
+            <span class="chip">Firestore</span>
+          </div>
+        </div>
+        <div class="stack__col reveal">
+          <h3>DevOps & APIs</h3>
+          <div class="chips">
+            <span class="chip">Docker</span>
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Postman</span>
+            <span class="chip">CI/CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">03 · Experiencia</span>
+        <h2>Mi camino <span class="gradient-text">profesional</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">Ago 2025 – Dic 2025</div>
+          <div class="timeline__card">
+            <div class="timeline__role">Pasante · Especialista IT</div>
+            <div class="timeline__company">YILPORT</div>
+            <ul>
+              <li>Desarrollo e implementación de intranet corporativa Full Stack con <strong>+500 usuarios</strong>.</li>
+              <li>Módulos web para gestión de usuarios, roles, incidencias y procesos internos.</li>
+              <li>Integración con SQL Server y desarrollo de APIs REST.</li>
+              <li>Soporte técnico, Help Desk y validación funcional.</li>
+              <li>Diseño y optimización de consultas SQL.</li>
+              <li>Implementación de pruebas funcionales y validación de aplicaciones</li>
+              <li>Gestión de respaldos de información (backups), mantenimiento de sistemas y soporte en redes y sistemas operativos</li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">Sep 2020 – Sep 2025</div>
+          <div class="timeline__card">
+            <div class="timeline__role">Full Stack Developer · Consultor IT</div>
+            <div class="timeline__company">Freelance</div>
+            <ul>
+              <li>Diseño y desarrollo de aplicaciones web Full Stack para clientes.</li>
+              <li>Análisis de requerimientos, traducción de necesidades del cliente a reglas de negocio y gestion de proyectos de desarrollo.</li>
+              <li>Proyectos de IA/ML: visión artificial, YOLOv8, TensorFlow, OpenCV.</li>
+              <li>Automatizaciones con Python y optimización de bases de datos SQL/NoSQL.</li>
+              <li>Documentación técnica, asesoría y acompañamiento tecnológico a clientes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">04 · Proyectos Destacados</span>
+        <h2>Cosas que he <span class="gradient-text">construido</span></h2>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project reveal">
+          <div class="project__head">
+            <div class="project__icon">🤟</div>
+            <div class="project__tags">
+              <span class="tag">IA</span>
+              <span class="tag">Visión Artificial</span>
+              <span class="tag">Investigación</span>
+            </div>
+          </div>
+          <h3>Desarrollo de un prototipo de interpretación de lenguaje de señas ecuatorianas a lenguaje de texto mediante visión artificial</h3>
+          <p>
+            Reconocimiento y traducción de gestos en tiempo real usando Machine Learning, Deep Learning
+            y visión artificial. Prototipo funcional con alta precisión.
+          </p>
+          <div class="project__stack">
+            <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>YOLO</span>
+          </div>
+          <div class="project__links">
+            <a href="https://doi.org/10.35290/ro.v6n3.2025.1554" target="_blank" rel="noopener" class="link-arrow">Ver artículo científico
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+            
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__head">
+            <div class="project__icon">🏢</div>
+            <div class="project__tags">
+              <span class="tag">Full Stack</span>
+              <span class="tag">Corporativo</span>
+            </div>
+          </div>
+          <h3>Intranet Corporativa — YILPORT</h3>
+          <p>
+            Solución web para centralizar y digitalizar procesos internos: gestión de usuarios, roles,
+            incidencias y servicios de TI. Usada por más de 500 usuarios.
+          </p>
+          <div class="project__stack">
+            <span>Full Stack</span><span>SQL Server</span><span>REST API</span>
+            <span>PHP</span><span>Bootstrap</span> <span>LARAVEL</span>
+          </div>
+          <div class="project__links">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__head">
+            <div class="project__icon">🔎</div>
+            <div class="project__tags">
+              <span class="tag">SQL</span>
+              <span class="tag">APIs</span>
+              <span class="tag">Automatización</span>
+            </div>
+          </div>
+          <h3>Sistema de Consulta Masiva de Empleados – Dashboard Yilport</h3>
+<p>
+  Automatización de búsquedas de personal mediante el desarrollo de una API REST en Laravel y la optimización de consultas en bloque en SQL Server. El sistema procesa lotes de más de 300 cédulas simultáneamente a través de una interfaz responsiva, reduciendo la búsqueda manual a segundos.
+</p>
+<div class="project__stack">
+  <span>PHP (Laravel)</span><span>SQL Server</span><span>API REST</span><span>Bootstrap</span><span>Optimización SQL</span>
+</div>
+<div class="project__links">
+  
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+  </a>
+</div>
+
+        </article>
+
+        <article class="project reveal">
+          <div class="project__head">
+            <div class="project__icon">🛡️</div>
+            <div class="project__tags">
+              <span class="tag">Ciberseguridad</span>
+              <span class="tag">Redes</span>
+            </div>
+          </div>
+          <h3>Ponencia Científica: Combatiendo el ARP Spoofing</h3>
+          <p>
+           Exposición e investigación sobre la detección y mitigación de ataques ARP Spoofing en redes LAN. Presentado en calidad de <strong>Ponente Investigador</strong> en la Semana de la Ciencia UTMACH 2024.
+          </p>
+          <div class="project__stack">
+            <span>Redes</span><span>Python</span><span>Seguridad</span>
+          </div>
+          <div class="project__links">
+            <a href="assets/Combatiendo%20el%20ARP%20SpoofingLeccionesAprendidasdeunEstudiodeCaso.pdf" target="_blank" rel="noopener" class="link-arrow">Certificado
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__head">
+            <div class="project__icon">🎤</div>
+            <div class="project__tags">
+              <span class="tag">Ponencia</span>
+              <span class="tag">Congreso</span>
+              <span class="tag">Investigación</span>
+            </div>
+          </div>
+          <h3>Ponencia & Investigación Internacional: Impresión 3D en Prótesis Humanas</h3>
+          <p>
+           Autor del trabajo de investigación presentado en el <strong>V Congreso Internacional de Desarrollo Universitario (CIDU 2023)</strong>. Análisis comparativo de técnicas de prototipado e impresión 3D personalizada aplicadas al desarrollo de prótesis humanas.
+          </p>
+          <div class="project__stack">
+            <span>Investigación</span><span>Software</span><span>Congreso</span>
+          </div>
+          <div class="project__links">
+            <a href="assets/congero.pdf" target="_blank" rel="noopener" class="link-arrow">Certificado
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project project--ghost reveal">
+          <div class="project__head">
+            <div class="project__icon">✨</div>
+            <div class="project__tags">
+              <span class="tag">+ Proyectos</span>
+            </div>
+          </div>
+          <h3>Y muchos más en GitHub</h3>
+          <p>
+            APIs REST, automatizaciones, scripts de IA, apps web y más. Pásate por mi GitHub
+            para ver el código y contribuir.
+          </p>
+          <div class="project__links">
+            <a href="https://github.com/yoyi1995?tab=repositories" target="_blank" rel="noopener" class="link-arrow">github.com/jordidiaz
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">05 · Investigación & Academia</span>
+        <h2>Aportes a la <span class="gradient-text">comunidad científica</span></h2>
+      </div>
+      <div class="research__grid">
+        <div class="research__card reveal">
+          <div class="research__year">2025</div>
+          <h3>Autor de Artículo Científico</h3>
+          <p class="research__venue">Revista Ódigos — Universidad Israel</p>
+          <p>Publicación del artículo <em>"Desarrollo de un prototipo de interpretación de lenguaje de señas ecuatorianas a lenguaje de texto mediante visión artificial"</em>.</p>
+          <a href="https://doi.org/10.35290/ro.v6n3.2025.1554" target="_blank" rel="noopener" class="link-arrow">Ver DOI
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+
+        <div class="research__card reveal">
+          <div class="research__year">2023</div>
+          <h3>Ponente Investigador</h3>
+          <p class="research__venue">CIDU — Universidad Técnica Estatal de Quevedo</p>
+          <p>Ponencia científica sobre innovación tecnológica y desarrollo de software en el Congreso Internacional de Desarrollo Universitario.</p>
+        </div>
+
+        <div class="research__card reveal">
+          <div class="research__year">2026 – 2030</div>
+          <h3>Miembro Externo — CEISH</h3>
+          <p class="research__venue">ITSUP · Comité de Ética en Investigación en Seres Humanos</p>
+          <p>Evaluación ética de propuestas de investigación, integridad de datos, anonimización y mitigación de sesgos en modelos computacionales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--cta" id="contact">
+    <div class="container">
+      <div class="cta reveal">
+        <span class="eyebrow">06 · Contacto</span>
+        <h2>¿Construimos algo <span class="gradient-text">chévere</span> juntos?</h2>
+        <p>
+          Estoy abierto a proyectos freelance, oportunidades Full Stack / IA y colaboraciones
+          de investigación. Escríbeme y conversamos.
+        </p>
+        <div class="cta__buttons">
+          <a href="mailto:jordiyeak@gmail.com" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+            jordiyeak@gmail.com
+          </a>
+          <a href="https://wa.me/+593995709352" target="_blank" rel="noopener" class="btn btn--ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/jordy-diaz-9315232b0/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:jordiyeak@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Ing Jordy Diaz — Construido con ☕ y código.</div>
+      <div class="footer__links">
+        <a href="#hero">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

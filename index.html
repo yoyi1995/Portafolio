@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jordy Díaz | Portafolio Profesional</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #334155;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    
+    header { text-align: center; padding: 60px 20px; }
+    h1 { font-size: 2.8rem; color: var(--accent); margin-bottom: 10px; }
+    p.subtitle { font-size: 1.25rem; color: var(--text-muted); }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 20px; }
+    .skill-tag { background: #0284c7; color: white; padding: 4px 12px; border-radius: 16px; font-size: 0.85rem; font-weight: bold; }
+
+    h2 { margin-top: 40px; margin-bottom: 20px; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: transform 0.2s; }
+    .card:hover { transform: translateY(-4px); }
+    .card h3 { color: #f1f5f9; margin-bottom: 8px; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px; }
+
+    .btn { display: inline-block; background: var(--accent); color: #0f172a; text-decoration: none; padding: 8px 16px; font-weight: bold; border-radius: 6px; font-size: 0.9rem; }
+    
+    footer { text-align: center; margin-top: 60px; padding: 20px; color: var(--text-muted); border-top: 1px solid var(--border); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Jordy Arturo Díaz de la Cruz</h1>
+      <p class="subtitle">Ingeniero en TI | Full Stack & AI Specialist</p>
+      
+      <div class="skills">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">OpenCV</span>
+        <span class="skill-tag">React / Next.js</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">SQL Server</span>
+      </div>
+
+      <div style="margin-top: 25px;">
+        <a href="https://www.linkedin.com/in/jordy-diaz-9315232b0/" target="_blank" class="btn">Ver Perfil en LinkedIn</a>
+      </div>
+    </header>
+
+    <main>
+      <h2>Proyectos Destacados</h2>
+      <div class="grid">
+        
+        <div class="card">
+          <h3>Interpretación de Lenguaje de Señas (IA)</h3>
+          <p>Reconocimiento y traducción de gestos en tiempo real mediante Deep Learning y Visión Artificial. Artículo publicado en revista científica.</p>
+          <a href="https://doi.org/10.35290/ro.v6n3.2025.1554" target="_blank" class="btn">Ver Publicación Científica</a>
+        </div>
+
+        <div class="card">
+          <h3>Intranet Corporativa Full Stack</h3>
+          <p>Plataforma web centralizada con gestión de roles e incidencias para más de 500 usuarios en YILPORT.</p>
+          <a href="#" class="btn">Detalles Técnicos</a>
+        </div>
+
+        <div class="card">
+          <h3>Sistema de Consulta de Empleados</h3>
+          <p>Solución con APIs REST y consultas SQL optimizadas sobre más de 300 registros en tiempo real.</p>
+          <a href="#" class="btn">Detalles Técnicos</a>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Jordy Díaz | Machala, Ecuador 🇪🇨</p>
+    </footer>
+  </div>
+
+</body>
+</html>
