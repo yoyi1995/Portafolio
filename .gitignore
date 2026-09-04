@@ -1,0 +1,32 @@
+# .gitignore para el portafolio
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Archivos de distribución / build
+dist/
+build/
+
+# Archivos comprimidos y binarios grandes
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Documentos (si no quieres subir PDFs)
+*.pdf
+
+# Entornos y variables
+.env
+
+# Logs
+*.log
